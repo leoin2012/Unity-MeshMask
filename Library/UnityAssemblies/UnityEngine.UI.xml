@@ -1,0 +1,594 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UnityEngine.UI</name>
+    </assembly>
+    <members>
+        <member name="T:UnityEngine.EventSystems.PointerEventData">
+            <summary>
+            Each touch event creates one of these containing all the relevant information.
+            </summary>
+        </member>
+        <member name="P:UnityEngine.EventSystems.EventSystem.firstSelectedGameObject">
+            <summary>
+            Only one object can be selected at a time. Think: controller-selected button.
+            </summary>
+        </member>
+        <member name="T:UnityEngine.EventSystems.EventTriggerType">
+            <summary>
+            This class is capable of triggering one or more remote functions from a specified event.
+            Usage: Attach it to an object with a collider, or to a GUI Graphic of your choice.
+            NOTE: Doing this will make this object intercept ALL events, and no event bubbling will occur from this object!
+            </summary>
+        </member>
+        <member name="F:UnityEngine.EventSystems.ExecuteEvents.s_InternalTransformList">
+            <summary>
+            Execute the specified event on the first game object underneath the current touch.
+            </summary>
+        </member>
+        <member name="M:UnityEngine.EventSystems.ExecuteEvents.GetEventList``1(UnityEngine.GameObject,System.Collections.Generic.IList{UnityEngine.EventSystems.IEventSystemHandler})">
+            <summary>
+            Get the specified object's event event.
+            </summary>
+        </member>
+        <member name="M:UnityEngine.EventSystems.ExecuteEvents.CanHandleEvent``1(UnityEngine.GameObject)">
+            <summary>
+            Whether the specified game object will be able to handle the specified event.
+            </summary>
+        </member>
+        <member name="M:UnityEngine.EventSystems.ExecuteEvents.GetEventHandler``1(UnityEngine.GameObject)">
+            <summary>
+            Bubble the specified event on the game object, figuring out which object will actually receive the event.
+            </summary>
+        </member>
+        <member name="F:UnityEngine.EventSystems.StandaloneInputModule.m_VerticalAxis">
+            <summary>
+            Name of the vertical axis for movement (if axis events are used).
+            </summary>
+        </member>
+        <member name="F:UnityEngine.EventSystems.StandaloneInputModule.m_SubmitButton">
+            <summary>
+            Name of the submit button.
+            </summary>
+        </member>
+        <member name="F:UnityEngine.EventSystems.StandaloneInputModule.m_CancelButton">
+            <summary>
+            Name of the submit button.
+            </summary>
+        </member>
+        <member name="P:UnityEngine.EventSystems.StandaloneInputModule.horizontalAxis">
+            <summary>
+            Name of the horizontal axis for movement (if axis events are used).
+            </summary>
+        </member>
+        <member name="P:UnityEngine.EventSystems.StandaloneInputModule.verticalAxis">
+            <summary>
+            Name of the vertical axis for movement (if axis events are used).
+            </summary>
+        </member>
+        <member name="M:UnityEngine.EventSystems.StandaloneInputModule.SendSubmitEventToSelectedObject">
+            <summary>
+            Process submit keys.
+            </summary>
+        </member>
+        <member name="M:UnityEngine.EventSystems.StandaloneInputModule.SendMoveEventToSelectedObject">
+            <summary>
+            Process keyboard events.
+            </summary>
+        </member>
+        <member name="M:UnityEngine.EventSystems.StandaloneInputModule.ProcessMouseEvent(System.Int32)">
+            <summary>
+            Process all mouse events.
+            </summary>
+        </member>
+        <member name="M:UnityEngine.EventSystems.StandaloneInputModule.ProcessMousePress(UnityEngine.EventSystems.PointerInputModule.MouseButtonEventData)">
+            <summary>
+            Process the current mouse press.
+            </summary>
+        </member>
+        <member name="M:UnityEngine.EventSystems.TouchInputModule.FakeTouches">
+            <summary>
+            For debugging touch-based devices using the mouse.
+            </summary>
+        </member>
+        <member name="M:UnityEngine.EventSystems.TouchInputModule.ProcessTouchEvents">
+            <summary>
+            Process all touch events.
+            </summary>
+        </member>
+        <member name="T:UnityEngine.EventSystems.Physics2DRaycaster">
+            <summary>
+            Simple event system using physics raycasts.
+            </summary>
+        </member>
+        <member name="T:UnityEngine.EventSystems.PhysicsRaycaster">
+            <summary>
+            Simple event system using physics raycasts.
+            </summary>
+        </member>
+        <member name="F:UnityEngine.EventSystems.PhysicsRaycaster.kNoEventMaskSet">
+            <summary>
+            Const to use for clarity when no event mask is set
+            </summary>
+        </member>
+        <member name="F:UnityEngine.EventSystems.PhysicsRaycaster.m_EventMask">
+            <summary>
+            Layer mask used to filter events. Always combined with the camera's culling mask if a camera is used.
+            </summary>
+        </member>
+        <member name="P:UnityEngine.EventSystems.PhysicsRaycaster.depth">
+            <summary>
+            Depth used to determine the order of event processing.
+            </summary>
+        </member>
+        <member name="P:UnityEngine.EventSystems.PhysicsRaycaster.finalEventMask">
+            <summary>
+            Event mask used to determine which objects will receive events.
+            </summary>
+        </member>
+        <member name="P:UnityEngine.EventSystems.PhysicsRaycaster.eventMask">
+            <summary>
+            Layer mask used to filter events. Always combined with the camera's culling mask if a camera is used.
+            </summary>
+        </member>
+        <member name="T:UnityEngine.UI.FontData">
+            <summary>
+            Labels reference specific font data used to draw them. This class contains that data.
+            </summary>
+        </member>
+        <member name="T:UnityEngine.UI.FontData.OnLoadFontDelegate">
+            <summary>
+            
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="F:UnityEngine.UI.FontData.OnLoadFont">
+            <summary>
+            Callback method for loading font
+            </summary>
+        </member>
+        <member name="P:UnityEngine.UI.FontData.defaultFontData">
+            <summary>
+            The default Font Data
+            </summary>
+        </member>
+        <member name="M:UnityEngine.UI.FontData.GetFontFromName(System.String)">
+            <summary>
+            Load font from resource
+            </summary>
+            <param name="fontName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnityEngine.UI.FontData.IsPresetFont(System.String)">
+            <summary>
+            Is the font a preset font
+            </summary>
+            <param name="fontName"></param>
+            <returns>True, if the font can be loaded from resources</returns>
+        </member>
+        <member name="T:UnityEngine.UI.Graphic">
+            <summary>
+            Base class for all UI components that should be derived from when creating new Graphic types.
+            </summary>
+        </member>
+        <member name="P:UnityEngine.UI.Graphic.defaultGraphicMaterial">
+            <summary>
+            Default material used to draw everything if no explicit material was specified.
+            </summary>
+        </member>
+        <member name="P:UnityEngine.UI.Graphic.depth">
+            <summary>
+            Absolute depth of the graphic, used by rendering and events -- lowest to highest.
+            </summary>
+        </member>
+        <member name="P:UnityEngine.UI.Graphic.rectTransform">
+            <summary>
+            Transform gets cached for speed.
+            </summary>
+        </member>
+        <member name="P:UnityEngine.UI.Graphic.canvasRenderer">
+            <summary>
+            UI Renderer component.
+            </summary>
+        </member>
+        <member name="P:UnityEngine.UI.Graphic.material">
+            <summary>
+            Returns the material used by this Graphic.
+            </summary>
+        </member>
+        <member name="P:UnityEngine.UI.Graphic.mainTexture">
+            <summary>
+            Returns the texture used to draw this Graphic.
+            </summary>
+        </member>
+        <member name="M:UnityEngine.UI.Graphic.OnEnable">
+            <summary>
+            Mark the Graphic and the canvas as having been changed.
+            </summary>
+        </member>
+        <member name="M:UnityEngine.UI.Graphic.OnDisable">
+            <summary>
+            Clear references.
+            </summary>
+        </member>
+        <member name="M:UnityEngine.UI.Graphic.UpdateMaterial">
+            <summary>
+            Update the renderer's material.
+            </summary>
+        </member>
+        <member name="M:UnityEngine.UI.Graphic.UpdateGeometry">
+            <summary>
+            Update the renderer's vertices.
+            </summary>
+        </member>
+        <member name="M:UnityEngine.UI.Graphic.OnPopulateMesh(UnityEngine.UI.VertexHelper)">
+            <summary>
+            Fill the vertex buffer data.
+            </summary>
+        </member>
+        <member name="M:UnityEngine.UI.Graphic.SetNativeSize">
+            <summary>
+            Make the Graphic have the native size of its content.
+            </summary>
+        </member>
+        <member name="F:UnityEngine.UI.GraphicRaycaster.s_SortedGraphics">
+            <summary>
+            Perform a raycast into the screen and collect all graphics underneath it.
+            </summary>
+        </member>
+        <member name="T:UnityEngine.UI.Image">
+            <summary>
+            Image is a textured element in the UI hierarchy.
+            </summary>
+        </member>
+        <member name="F:UnityEngine.UI.Image.m_Type">
+            How the Image is drawn.
+        </member>
+        <member name="F:UnityEngine.UI.Image.m_FillMethod">
+            Filling method for filled sprites.
+        </member>
+        <member name="F:UnityEngine.UI.Image.m_FillAmount">
+            Amount of the Image shown. 0-1 range with 0 being nothing shown, and 1 being the full Image.
+        </member>
+        <member name="F:UnityEngine.UI.Image.m_FillClockwise">
+            Whether the Image should be filled clockwise (true) or counter-clockwise (false).
+        </member>
+        <member name="F:UnityEngine.UI.Image.m_FillOrigin">
+            Controls the origin point of the Fill process. Value means different things with each fill method.
+        </member>
+        <member name="P:UnityEngine.UI.Image.mainTexture">
+            <summary>
+            Image's texture comes from the UnityEngine.Image.
+            </summary>
+        </member>
+        <member name="P:UnityEngine.UI.Image.hasBorder">
+            <summary>
+            Whether the Image has a border to work with.
+            </summary>
+        </member>
+        <member name="M:UnityEngine.UI.Image.GetDrawingDimensions(System.Boolean)">
+            Image's dimensions used for drawing. X = left, Y = bottom, Z = right, W = top.
+        </member>
+        <member name="M:UnityEngine.UI.Image.OnPopulateMesh(UnityEngine.UI.VertexHelper)">
+            <summary>
+            Update the UI renderer mesh.
+            </summary>
+        </member>
+        <member name="M:UnityEngine.UI.Image.GenerateSimpleSprite(UnityEngine.UI.VertexHelper,System.Boolean)">
+            <summary>
+            Generate vertices for a simple Image.
+            </summary>
+        </member>
+        <member name="F:UnityEngine.UI.Image.s_VertScratch">
+            <summary>
+            Generate vertices for a 9-sliced Image.
+            </summary>
+        </member>
+        <member name="M:UnityEngine.UI.Image.GenerateTiledSprite(UnityEngine.UI.VertexHelper)">
+            <summary>
+            Generate vertices for a tiled Image.
+            </summary>
+        </member>
+        <member name="F:UnityEngine.UI.Image.s_Xy">
+            <summary>
+            Generate vertices for a filled Image.
+            </summary>
+        </member>
+        <member name="M:UnityEngine.UI.Image.RadialCut(UnityEngine.Vector3[],UnityEngine.Vector3[],System.Single,System.Boolean,System.Int32)">
+            <summary>
+            Adjust the specified quad, making it be radially filled instead.
+            </summary>
+        </member>
+        <member name="M:UnityEngine.UI.Image.RadialCut(UnityEngine.Vector3[],System.Single,System.Single,System.Boolean,System.Int32)">
+            <summary>
+            Adjust the specified quad, making it be radially filled instead.
+            </summary>
+        </member>
+        <member name="T:UnityEngine.UI.InputField">
+            <summary>
+            Editable text input field.
+            </summary>
+        </member>
+        <member name="F:UnityEngine.UI.InputField.m_TextComponent">
+            <summary>
+            Text Text used to display the input's value.
+            </summary>
+        </member>
+        <member name="F:UnityEngine.UI.InputField.m_InputType">
+            <summary>
+            Type of data expected by the input field.
+            </summary>
+        </member>
+        <member name="F:UnityEngine.UI.InputField.m_AsteriskChar">
+            <summary>
+            The character used to hide text in password field.
+            </summary>
+        </member>
+        <member name="F:UnityEngine.UI.InputField.m_KeyboardType">
+            <summary>
+            Keyboard type applies to mobile keyboards that get shown.
+            </summary>
+        </member>
+        <member name="F:UnityEngine.UI.InputField.m_HideMobileInput">
+            <summary>
+            Should hide mobile input.
+            </summary>
+        </member>
+        <member name="F:UnityEngine.UI.InputField.m_CharacterValidation">
+            <summary>
+            What kind of validation to use with the input field's data.
+            </summary>
+        </member>
+        <member name="F:UnityEngine.UI.InputField.m_CharacterLimit">
+            <summary>
+            Maximum number of characters allowed before input no longer works.
+            </summary>
+        </member>
+        <member name="F:UnityEngine.UI.InputField.m_OnEndEdit">
+            <summary>
+            Event delegates triggered when the input field submits its data.
+            </summary>
+        </member>
+        <member name="F:UnityEngine.UI.InputField.m_OnValueChanged">
+            <summary>
+            Event delegates triggered when the input field changes its data.
+            </summary>
+        </member>
+        <member name="F:UnityEngine.UI.InputField.m_OnValidateInput">
+            <summary>
+            Custom validation callback.
+            </summary>
+        </member>
+        <member name="F:UnityEngine.UI.InputField.m_Text">
+            <summary>
+            Input field's value.
+            </summary>
+        </member>
+        <member name="P:UnityEngine.UI.InputField.shouldHideMobileInput">
+            <summary>
+            Should the mobile keyboard input be hidden.
+            </summary>
+        </member>
+        <member name="P:UnityEngine.UI.InputField.text">
+            <summary>
+            Input field's current text value.
+            </summary>
+        </member>
+        <member name="P:UnityEngine.UI.InputField.caretPositionInternal">
+            <summary>
+            Current position of the cursor.
+            Getters are public Setters are protected
+            </summary>
+        </member>
+        <member name="P:UnityEngine.UI.InputField.caretPosition">
+            <summary>
+            Get: Returns the focus position as thats the position that moves around even during selection.
+            Set: Set both the anchor and focus position such that a selection doesn't happen
+            </summary>
+        </member>
+        <member name="P:UnityEngine.UI.InputField.selectionAnchorPosition">
+            <summary>
+            Get: Returns the fixed position of selection
+            Set: If Input.compositionString is 0 set the fixed position
+            </summary>
+        </member>
+        <member name="P:UnityEngine.UI.InputField.selectionFocusPosition">
+            <summary>
+            Get: Returns the variable position of selection
+            Set: If Input.compositionString is 0 set the variable position
+            </summary>
+        </member>
+        <member name="M:UnityEngine.UI.InputField.LateUpdate">
+            <summary>
+            Update the text based on input.
+            </summary>
+        </member>
+        <member name="M:UnityEngine.UI.InputField.GetCharacterIndexFromPosition(UnityEngine.Vector2)">
+            <summary>
+            Given an input position in local space on the Text return the index for the selection cursor at this position.
+            </summary>
+        </member>
+        <member name="F:UnityEngine.UI.InputField.m_ProcessingEvent">
+            <summary>
+            Handle the specified event.
+            </summary>
+        </member>
+        <member name="M:UnityEngine.UI.InputField.LineUpCharacterPosition(System.Int32,System.Boolean)">
+            <summary>
+             Use cachedInputTextGenerator as the y component for the UICharInfo is not required
+            </summary>
+        </member>
+        <member name="M:UnityEngine.UI.InputField.LineDownCharacterPosition(System.Int32,System.Boolean)">
+            <summary>
+             Use cachedInputTextGenerator as the y component for the UICharInfo is not required
+            </summary>
+        </member>
+        <member name="M:UnityEngine.UI.InputField.SendOnSubmit">
+            <summary>
+            Submit the input field's text.
+            </summary>
+        </member>
+        <member name="M:UnityEngine.UI.InputField.Append(System.String)">
+            <summary>
+            Append the specified text to the end of the current.
+            </summary>
+        </member>
+        <member name="M:UnityEngine.UI.InputField.UpdateLabel">
+            <summary>
+            Update the visual text Text.
+            </summary>
+        </member>
+        <member name="M:UnityEngine.UI.InputField.Validate(System.String,System.Int32,System.Char)">
+            <summary>
+            Validate the specified input.
+            </summary>
+        </member>
+        <member name="M:UnityEngine.UI.Mask.GetModifiedMaterial(UnityEngine.Material)">
+            Stencil calculation time!
+        </member>
+        <member name="T:UnityEngine.UI.Misc">
+            <summary>
+            Helper class containing generic functions used throughout the UI library.
+            </summary>
+        </member>
+        <member name="M:UnityEngine.UI.Misc.Destroy(UnityEngine.Object)">
+            <summary>
+            Destroy the specified object, immediately if in edit mode.
+            </summary>
+        </member>
+        <member name="M:UnityEngine.UI.Misc.DestroyImmediate(UnityEngine.Object)">
+            <summary>
+            Destroy the specified object immediately, unless not in the editor, in which case the regular Destroy is used instead.
+            </summary>
+        </member>
+        <member name="T:UnityEngine.UI.RawImage">
+            <summary>
+            If you don't have or don't wish to create an atlas, you can simply use this script to draw a texture.
+            Keep in mind though that this will create an extra draw call with each RawImage present, so it's
+            best to use it only for backgrounds or temporary visible graphics.
+            </summary>
+        </member>
+        <member name="P:UnityEngine.UI.RawImage.mainTexture">
+            <summary>
+            Returns the texture used to draw this Graphic.
+            </summary>
+        </member>
+        <member name="P:UnityEngine.UI.RawImage.texture">
+            <summary>
+            Texture to be used.
+            </summary>
+        </member>
+        <member name="P:UnityEngine.UI.RawImage.uvRect">
+            <summary>
+            UV rectangle used by the texture.
+            </summary>
+        </member>
+        <member name="M:UnityEngine.UI.RawImage.SetNativeSize">
+            <summary>
+            Adjust the scale of the Graphic to make it pixel-perfect.
+            </summary>
+        </member>
+        <member name="T:UnityEngine.UI.StencilMaterial">
+            <summary>
+            Dynamic material class makes it possible to create custom materials on the fly on a per-Graphic basis,
+            and still have them get cleaned up correctly.
+            </summary>
+        </member>
+        <member name="M:UnityEngine.UI.StencilMaterial.Add(UnityEngine.Material,System.Int32,UnityEngine.Rendering.StencilOp,UnityEngine.Rendering.CompareFunction,UnityEngine.Rendering.ColorWriteMask)">
+            <summary>
+            Add a new material using the specified base and stencil ID.
+            </summary>
+        </member>
+        <member name="M:UnityEngine.UI.StencilMaterial.Add(UnityEngine.Material,System.Int32,UnityEngine.Rendering.StencilOp,UnityEngine.Rendering.CompareFunction,UnityEngine.Rendering.ColorWriteMask,System.Int32,System.Int32)">
+            <summary>
+            Add a new material using the specified base and stencil ID.
+            </summary>
+        </member>
+        <member name="M:UnityEngine.UI.StencilMaterial.Remove(UnityEngine.Material)">
+            <summary>
+            Remove an existing material, automatically cleaning it up if it's no longer in use.
+            </summary>
+        </member>
+        <member name="T:UnityEngine.UI.Text">
+            <summary>
+            Labels are graphics that display text.
+            </summary>
+        </member>
+        <member name="P:UnityEngine.UI.Text.cachedTextGenerator">
+            <summary>
+            Get or set the material used by this Text.
+            </summary>
+        </member>
+        <member name="P:UnityEngine.UI.Text.mainTexture">
+            <summary>
+            Text's texture comes from the font.
+            </summary>
+        </member>
+        <member name="P:UnityEngine.UI.Text.text">
+            <summary>
+            Text that's being displayed by the Text.
+            </summary>
+        </member>
+        <member name="P:UnityEngine.UI.Text.supportRichText">
+            <summary>
+            Whether this Text will support rich text.
+            </summary>
+        </member>
+        <member name="P:UnityEngine.UI.Text.resizeTextForBestFit">
+            <summary>
+            Wrap mode used by the text.
+            </summary>
+        </member>
+        <member name="P:UnityEngine.UI.Text.alignment">
+            <summary>
+            Alignment anchor used by the text.
+            </summary>
+        </member>
+        <member name="P:UnityEngine.UI.Text.fontStyle">
+            <summary>
+            Font style used by the Text's text.
+            </summary>
+        </member>
+        <member name="T:UnityEngine.UI.Toggle">
+            <summary>
+            Simple toggle -- something that has an 'on' and 'off' states: checkbox, toggle button, radio button, etc.
+            </summary>
+        </member>
+        <member name="F:UnityEngine.UI.Toggle.toggleTransition">
+            <summary>
+            Transition type.
+            </summary>
+        </member>
+        <member name="F:UnityEngine.UI.Toggle.graphic">
+            <summary>
+            Graphic the toggle should be working with.
+            </summary>
+        </member>
+        <member name="F:UnityEngine.UI.Toggle.onValueChanged">
+            <summary>
+            Allow for delegate-based subscriptions for faster events than 'eventReceiver', and allowing for multiple receivers.
+            </summary>
+        </member>
+        <member name="P:UnityEngine.UI.Toggle.isOn">
+            <summary>
+            Whether the toggle is currently active.
+            </summary>
+        </member>
+        <member name="M:UnityEngine.UI.Toggle.PlayEffect(System.Boolean)">
+            <summary>
+            Play the appropriate effect.
+            </summary>
+        </member>
+        <member name="M:UnityEngine.UI.Toggle.Start">
+            <summary>
+            Assume the correct visual state.
+            </summary>
+        </member>
+        <member name="M:UnityEngine.UI.Toggle.OnPointerClick(UnityEngine.EventSystems.PointerEventData)">
+            <summary>
+            React to clicks.
+            </summary>
+        </member>
+    </members>
+</doc>
